@@ -1,27 +1,9 @@
-# `product` function that takes two numbers and outputs their product
-# def product():
-#     a = int(input("Enter a number: "))
-#     b = int(input("Enter another number: "))
-#     print(a * b)
-
-# `product` function that has two parameters `a` and `b` and outputs their product
-# def product(a, b):
-#     print(a * b)
+from graphics import *
+import math
 
 # `product` function that has two parameters `a` and `b` and returns their product
 def product(a, b):
     return a * b
-
-# `divide` function that takes two numbers and outputs their quotient
-# def divide():
-#     a = int(input("Enter a number: "))
-#     b = int(input("Enter another number: "))
-#     print(a / b)
-
-
-# `divide` function that has two parameters `a` and `b` and outputs their quotient
-# def divide(a, b):
-#     print(a / b)
 
 
 # `divide` function that has two parameters `a` and `b` and returns their quotient
@@ -40,22 +22,11 @@ def main():
     print("{0} divided by {1} is {2}.".format(
         num1, num2, divideResult))
 
-# `greet` function that takes a name and outputs a greeting
-# def greet():
-#     name = input("Enter your name: ")
-#     print("Hello, {0}!".format(name))
-
-
-# `greet` function that has a parameter `name` and outputs a greeting
-# def greet(name):
-#     print("Hello, {0}!".format(name))
-
-
 # `greet` function that has a parameter `name` and returns a greeting
 def greet(name):
     return "Hello, {0}!".format(name)
 
-
+# `calcFutureValue` function has two parameters `amount` and `years`, returns the future value of the investment
 def calcFutureValue(amount, years):
     interestRate = 0.065
     for year in range(years):
@@ -63,9 +34,33 @@ def calcFutureValue(amount, years):
     return amount
 
 
+# `futureValue` function that takes an amount and number of years and outputs the future value of the investment
 def futureValue():
     amount = float(input("Enter an amount to invest: "))
     years = int(input("Enter the number of years: "))
     finalValue = calcFutureValue(amount, years)
     print("Investing GBP {0:0.2f} for {1} years".format(amount, years),
           "will result in GBP {0:0.2f}.".format(finalValue))
+
+# For exercises 1 and 2
+def areaOfCircle(radius):
+    return math.pi * radius ** 2
+
+
+# For exercise 3
+def drawCircle(win, centre, radius, colour):
+    circle = Circle(centre, radius)
+    circle.setFill(colour)
+    circle.setWidth(2)
+    circle.draw(win)
+
+
+def drawBrownEyeInCentre():
+    window = GraphWin()
+    # Add your code here
+
+
+# For exercise 5
+def drawBrownEye(win, centre, radius):
+    pass
+    # Remove pass and add your code here
