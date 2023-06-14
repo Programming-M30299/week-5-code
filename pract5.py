@@ -1,40 +1,71 @@
-def sayHello():
-    print("Hello World")
+# `product` function that takes two numbers and outputs their product
+# def product():
+#     a = int(input("Enter a number: "))
+#     b = int(input("Enter another number: "))
+#     print(a * b)
+
+# `product` function that has two parameters `a` and `b` and outputs their product
+# def product(a, b):
+#     print(a * b)
+
+# `product` function that has two parameters `a` and `b` and returns their product
+def product(a, b):
+    return a * b
+
+# `divide` function that takes two numbers and outputs their quotient
+# def divide():
+#     a = int(input("Enter a number: "))
+#     b = int(input("Enter another number: "))
+#     print(a / b)
 
 
-def sayHello2():
-    print("Hello")
-    print("World")
+# `divide` function that has two parameters `a` and `b` and outputs their quotient
+# def divide(a, b):
+#     print(a / b)
 
 
-def sayBye():
-    print("Goodbye Mars")
+# `divide` function that has two parameters `a` and `b` and returns their quotient
+def divide(a, b):
+    return a / b
 
 
-# TODO: Write `sayBye2` function here
+# `main` function that takes two numbers and outputs their product and quotient
+def main():
+    num1 = int(input("Enter a number: "))
+    num2 = int(input("Enter another number: "))
+    productResult = product(num1, num2)
+    divideResult = divide(num1, num2)
+    print("{0} times {1} is {2}.".format(
+        num1, num2, productResult))
+    print("{0} divided by {1} is {2}.".format(
+        num1, num2, divideResult))
+
+# `greet` function that takes a name and outputs a greeting
+# def greet():
+#     name = input("Enter your name: ")
+#     print("Hello, {0}!".format(name))
 
 
-# A simple kilograms to ounces conversion program
-# It asks for a weight in kilograms (for example 10)
-# and converts it to ounces (352.74)
-def kilos2Ounces():
-    kilos = float(input("Enter a weight in kilograms: "))
-    ounces = kilos * 35.274
-    print("The weight in ounces is", ounces)
+# `greet` function that has a parameter `name` and outputs a greeting
+# def greet(name):
+#     print("Hello, {0}!".format(name))
 
 
-def count():
-    for number in range(10):
-        print("Number is now: ", number)
+# `greet` function that has a parameter `name` and returns a greeting
+def greet(name):
+    return "Hello, {0}!".format(name)
 
 
-# A simple euros to pounds conversion program
-# It asks for a value in euros (for example 10)
-# and converts it to pounds (8.7)
-def euros2Pounds():
-    euros = float(input("Enter a value in euros: "))
-    pounds = euros * 0.87
-    print("The value in pounds is", pounds)
+def calcFutureValue(amount, years):
+    interestRate = 0.065
+    for year in range(years):
+        amount = amount * (1 + interestRate)
+    return amount
 
 
-# TODO: Write `dollars2Pounds` and the rest of your solutions for the programming exercises here
+def futureValue():
+    amount = float(input("Enter an amount to invest: "))
+    years = int(input("Enter the number of years: "))
+    finalValue = calcFutureValue(amount, years)
+    print("Investing GBP {0:0.2f} for {1} years".format(amount, years),
+          "will result in GBP {0:0.2f}.".format(finalValue))
