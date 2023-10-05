@@ -1,9 +1,8 @@
-from graphics import *
 import math
+from graphics import *
 
 
 def greet(name):
-    name = input("What is your name? ")
     return f"Hello, {name}!"
 
 
@@ -18,8 +17,8 @@ def main():
 
     num1 = int(input("Enter a number: "))
     num2 = int(input("Enter another number: "))
-    productResult = product(num1, num2)
-    print(f"{num1} x {num2} = {productResult}")
+    result = product(num1, num2)
+    print(f"{num1} x {num2} = {result}")
 
 
 def calcFutureValue(amount, years):
@@ -32,9 +31,11 @@ def calcFutureValue(amount, years):
 def futureValue():
     amount = float(input("Enter an amount to invest: "))
     years = int(input("Enter the number of years: "))
-    finalValue = calcFutureValue(amount, years)
-    print("Investing GBP {0:0.2f} for {1} years".format(amount, years),
-          "will result in GBP {0:0.2f}.".format(finalValue))
+    final = calcFutureValue(amount, years)
+
+    output = f"Investing £{amount:0.2f} for {years} years "
+    output += f"results in £{final:0.2f}."
+    print(output)
 
 
 # For exercises 1 and 2
