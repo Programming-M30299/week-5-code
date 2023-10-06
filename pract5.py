@@ -10,6 +10,16 @@ def product(a, b):
     return a * b
 
 
+def divide(a, b):
+    return a / b
+
+
+def divdeAndProduct(a, b):
+    productResult = product(a, b)
+    divideResult = divide(a, b)
+    return productResult, divideResult
+
+
 def main():
     myName = input("What is your name? ")
     greeting = greet(myName)
@@ -17,8 +27,9 @@ def main():
 
     num1 = int(input("Enter a number: "))
     num2 = int(input("Enter another number: "))
-    result = product(num1, num2)
-    print(f"{num1} x {num2} = {result}")
+    productResult, divideResult = divdeAndProduct(num1, num2)
+    print(f"{num1} * {num2} = {productResult}")
+    print(f"{num1} / {num2} = {divideResult}")
 
 
 def calcFutureValue(amount, years):
