@@ -1,5 +1,5 @@
 import math
-from graphics import *
+from graphix import Window, Circle
 
 
 def greet(name):
@@ -14,35 +14,35 @@ def divide(a, b):
     return a / b
 
 
-def divdeAndProduct(a, b):
-    productResult = product(a, b)
-    divideResult = divide(a, b)
-    return productResult, divideResult
+def divide_and_product(a, b):
+    product_result = product(a, b)
+    divide_result = divide(a, b)
+    return product_result, divide_result
 
 
 def main():
-    myName = input("What is your name? ")
-    greeting = greet(myName)
+    my_name = input("What is your name? ")
+    greeting = greet(my_name)
     print(greeting)
 
     num1 = int(input("Enter a number: "))
     num2 = int(input("Enter another number: "))
-    productResult, divideResult = divdeAndProduct(num1, num2)
-    print(f"{num1} * {num2} = {productResult}")
-    print(f"{num1} / {num2} = {divideResult}")
+    product_result, divide_result = divide_and_product(num1, num2)
+    print(f"{num1} * {num2} = {product_result}")
+    print(f"{num1} / {num2} = {divide_result}")
 
 
-def calcFutureValue(amount, years):
-    interestRate = 0.065
+def calc_future_value(amount, years):
+    interest_rate = 0.065
     for year in range(years):
-        amount = amount * (1 + interestRate)
+        amount = amount * (1 + interest_rate)
     return amount
 
 
-def futureValue():
+def future_value():
     amount = float(input("Enter an amount to invest: "))
     years = int(input("Enter the number of years: "))
-    final = calcFutureValue(amount, years)
+    final = calc_future_value(amount, years)
 
     output = f"Investing £{amount:0.2f} for {years} years "
     output += f"results in £{final:0.2f}."
@@ -50,24 +50,24 @@ def futureValue():
 
 
 # For exercises 1 and 2
-def areaOfCircle(radius):
+def area_of_circle(radius):
     return math.pi * radius ** 2
 
 
 # For exercise 3
-def drawCircle(win, centre, radius, colour):
+def draw_circle(win, centre, radius, colour):
     circle = Circle(centre, radius)
-    circle.setFill(colour)
-    circle.setWidth(2)
+    circle.fill_colour = colour
+    circle.outline_width = 2
     circle.draw(win)
 
 
-def drawBrownEyeInCentre():
-    window = GraphWin()
+def draw_brown_eye_in_centre():
+    window = Window()
     # Add your code here
 
 
 # For exercise 5
-def drawBrownEye(win, centre, radius):
+def draw_brown_eye(win, centre, radius):
     pass
     # Remove pass and add your code here
