@@ -1,7 +1,8 @@
-from graphics import *
+from graphix import Window, Circle, Line, Point
+
 
 def drawStickFigure():
-    win = GraphWin("Stick figure", 300, 200)
+    win = Window("Stick figure", 300, 200)
     head = Circle(Point(200, 60), 20)
     head.draw(win)
     body = Line(Point(200, 80), Point(200, 120))
